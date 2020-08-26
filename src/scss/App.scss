@@ -1,0 +1,124 @@
+$primary-color: rgb(91, 27, 43);
+$secondary-color: rgb(151, 47, 72);
+$darker-color: rgb(119, 34, 73);
+$dark-color: rgb(36, 23, 30);
+$white-color: rgb(255, 255, 255);
+
+$darker-transparent: rgba(119, 34, 73, 0.8);
+$secondary-transparent: rgba(151, 47, 72, 0.8);
+$dark-transparent: rgba(36, 23, 30, 0.5);
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+@import 'Layout';
+@import 'Navigation';
+@import 'Content';
+@import 'Footer';
+@import 'Tabs';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Fira Code', monospace;
+}
+
+h1, h2, h3, h4, h5, a, p {
+    letter-spacing: 0.2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/black.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-animation {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.text-primary {
+    color: $primary-color;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    h5 {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    a {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}

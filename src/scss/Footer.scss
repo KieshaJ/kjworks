@@ -1,0 +1,43 @@
+.footer {
+    background-color: $secondary-transparent;
+    width: 100vw;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    h5 {
+        color: $white-color;
+        position: relative;
+        z-index: 1;
+        margin: auto;
+    }
+
+    .footer-shape {
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        width: 200px;
+        border-bottom: 20px solid $secondary-transparent;
+    }
+
+    .footer-shape-left {
+        left: 0;
+        border-right: 20px solid transparent;
+    }
+
+    .footer-shape-right {
+        border-left: 20px solid transparent;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 50px;
+
+        .footer-shape {
+            bottom: 50px;
+            width: 100px;
+        }
+    }
+};
