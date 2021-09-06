@@ -1,18 +1,25 @@
-$primary-color: rgb(91, 27, 43);
-$secondary-color: rgb(151, 47, 72);
-$darker-color: rgb(119, 34, 73);
-$dark-color: rgb(36, 23, 30);
-$white-color: rgb(255, 255, 255);
+$primary-color: #c4539f;
+$primary-color-darker: #9d427f;
+$secondary-color: #00aeef;
+$secondary-color-darker: #008bbf;
 
-$darker-transparent: rgba(119, 34, 73, 0.8);
-$secondary-transparent: rgba(151, 47, 72, 0.8);
-$dark-transparent: rgba(36, 23, 30, 0.5);
+$dark-color: #000000;
+$white-color: #ffffff;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+$primary-font: 'WarowniaUlt', helvetica;
+$secondary-font: 'Varela Round', sans-serif;
+
+$gradient: linear-gradient(45deg, $secondary-color, $primary-color);
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@font-face {
+    font-family: "WarowniaUlt";
+    src: local("WarowniaUlt"), url("../fonts/WarowniaUlt.otf") format("truetype");
+}
 
 @import 'Layout';
 @import 'Navigation';
-@import 'Content';
+@import 'Section';
 @import 'Footer';
 @import 'Tabs';
 
@@ -22,12 +29,15 @@ $dark-transparent: rgba(36, 23, 30, 0.5);
 }
 
 body {
-    overflow: hidden;
-    font-family: 'Fira Code', monospace;
+    overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, a, p {
-    letter-spacing: 0.2rem;
+h1, h2, h3, h4, h5 {
+    font-family: $primary-font;
+}
+
+a, p {
+    font-family: $secondary-font;
 }
 
 h1 {
@@ -67,24 +77,15 @@ p {
 
 .app {
     width: 100vw;
-    height: 100vh;
-    background-image: url("../images/black.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.bg-animation {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 0;
+    background-color: black;
 }
 
 .text-primary {
     color: $primary-color;
+}
+
+.text-secondary {
+    color: $secondary-color;
 }
 
 @media screen and (max-width: 768px) {

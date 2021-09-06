@@ -1,2 +1,0 @@
-# kjworks
-KJWorks Protfolio
