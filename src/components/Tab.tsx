@@ -11,10 +11,10 @@ const Tab = (props: Props): JSX.Element => {
     const { active, label, onClick } = props;
 
     return (
-        <li>
+        <li className={active ? 'tab-active' : ''}>
             <button
                 type="button"
-                className={active ? 'tab tab-active' : 'tab'}
+                className='tab'
                 onClick={onClick}
             >
                 {label}

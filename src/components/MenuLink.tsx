@@ -20,7 +20,7 @@ const MenuLink = (props: Props): JSX.Element => {
             <span className="bubble bubble-1"/>
             <span className="bubble bubble-2"/>
             <span className="bubble bubble-3"/>
-            <div>
+            <div className="link-content">
                 {children}
             </div>
         </Link>

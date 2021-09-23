@@ -2,15 +2,16 @@ import React, {useState} from 'react';
 
 import MenuLink from './MenuLink';
 import logo from '../images/logo1.png';
+import NavigationConfig from "../configs/NavigationConfig";
 
 type Props = {
     path: string;
     setPath: Function;
-    links: Array<any>;
 };
 
 const Navigation = (props: Props): JSX.Element => {
-    const {path, setPath, links} = props;
+    const {path, setPath} = props;
+    const links = NavigationConfig.links;
     const [open] = useState(false);
 
     const navigate = (e: React.MouseEvent, newPath: string): void => {
@@ -29,21 +30,7 @@ const Navigation = (props: Props): JSX.Element => {
                     <img className="menu-logo" src={logo} alt="KJWorks"/>
                 </a>
             </div>
-            {/*<button*/}
-            {/*    type="button"*/}
-            {/*    className="menu-button"*/}
-            {/*    onClick={(): void => setOpen(!open)}*/}
-            {/*>*/}
-            {/*    <Menu/>*/}
-            {/*</button>*/}
             <div className={`main-menu ${open ? 'open' : ''}`}>
-                {/*<button*/}
-                {/*    className="nav-overlay"*/}
-                {/*    type="button"*/}
-                {/*    onClick={(): void => setOpen(!open)}*/}
-                {/*>*/}
-                {/*</button>*/}
-
                 {links.map((link) => (
                     <MenuLink
                         active={path === link.url}
@@ -54,14 +41,6 @@ const Navigation = (props: Props): JSX.Element => {
                         {link.icon}
                     </MenuLink>
                 ))}
-
-                {/*<button*/}
-                {/*    className="close-menu-button"*/}
-                {/*    type="button"*/}
-                {/*    onClick={(): void => setOpen(!open)}*/}
-                {/*>*/}
-                {/*    <Close />*/}
-                {/*</button>*/}
             </div>
         </div>
     );

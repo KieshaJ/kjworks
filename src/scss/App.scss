@@ -18,8 +18,11 @@ $gradient: linear-gradient(45deg, $secondary-color, $primary-color);
 }
 
 @import 'Layout';
+@import 'PageDecorations';
 @import 'Navigation';
+@import 'PageIndicator';
 @import 'Section';
+@import 'AnimatedLink';
 @import 'Footer';
 @import 'Tabs';
 
@@ -36,7 +39,7 @@ h1, h2, h3, h4, h5 {
     font-family: $primary-font;
 }
 
-a, p {
+a, p, b {
     font-family: $secondary-font;
 }
 
@@ -70,7 +73,7 @@ a {
     font-weight: 600;
 }
 
-p {
+p, b {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -86,6 +89,21 @@ p {
 
 .text-secondary {
     color: $secondary-color;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+    background: $dark-color;
+    border-radius: 16px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px $white-color;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $gradient;
+    border-radius: 16px;
 }
 
 @media screen and (max-width: 768px) {
@@ -121,5 +139,9 @@ p {
     p {
         font-size: 1rem;
         font-weight: 500;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
     }
 }

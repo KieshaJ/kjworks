@@ -1,0 +1,64 @@
+.page-decoration {
+    position: fixed;
+    right: 0;
+
+    &.first {
+        z-index: 4;
+        top: -100px;
+    }
+
+    &.second {
+        z-index: 2;
+        top: -70px;
+    }
+
+    &.third {
+        z-index: 2;
+        bottom: -70px;
+    }
+
+    &.fourth {
+        z-index: 4;
+        bottom: -100px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .page-decoration {
+        &.first {
+            top: -20px;
+        }
+
+        &.second {
+            top: -10px;
+        }
+
+        &.third {
+            bottom: 0;
+        }
+
+        &.fourth {
+            bottom: -10px;
+        }
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .page-decoration {
+        &.first {
+            top: -80px;
+        }
+
+        &.second {
+            top: -70px;
+        }
+
+        &.third {
+            bottom: -80px;
+        }
+
+        &.fourth {
+            bottom: -90px;
+        }
+    }
+}
