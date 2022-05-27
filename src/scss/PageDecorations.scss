@@ -1,6 +1,10 @@
 .page-decoration {
     position: fixed;
+    display: block;
+    width: 100vw;
+    min-height: 120px;
     right: 0;
+    background: url("../images/svg/PageDecorationTop1.svg");
 
     &.first {
         z-index: 4;

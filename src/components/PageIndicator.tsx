@@ -11,8 +11,8 @@ const PageIndicator = (props: Props): JSX.Element => {
 
     return (
         <div className="page-indicator">
-            {links.map((link) => (
-                <div className={`page-indicator-shape ${path === link.url ? 'active' : ''}`}/>
+            {links.map((link, index) => (
+                <div key={`page-indicator-${index}`} className={`page-indicator-shape ${path === link.url ? 'active' : ''}`}/>
             ))}
         </div>
     );
