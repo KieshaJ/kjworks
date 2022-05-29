@@ -1,5 +1,5 @@
-import {Build, Code, ContactMail, Home, Info} from "@material-ui/icons";
-import React from "react";
+import { Build, Code, ContactMail, Home, Info } from '@material-ui/icons';
+import React from 'react';
 
 const NavigationConfig = {
     links: [
@@ -8,37 +8,37 @@ const NavigationConfig = {
             url: '/',
             sectionId: '#home',
             text: 'Home',
-            icon: <Home/>
+            icon: <Home />,
         },
         {
             id: 'link-2',
             url: '/about',
             sectionId: '#about',
             text: 'About',
-            icon: <Info/>
+            icon: <Info />,
         },
         {
             id: 'link-3',
             url: '/skills',
             sectionId: '#skills',
             text: 'Skills',
-            icon: <Build/>
+            icon: <Build />,
         },
         {
             id: 'link-4',
             url: '/works',
             sectionId: '#works',
             text: 'Works',
-            icon: <Code/>
+            icon: <Code />,
         },
         {
             id: 'link-5',
             url: '/contact',
-            sectionId: "#contact",
+            sectionId: '#contact',
             text: 'Contact',
-            icon: <ContactMail/>
-        }
-    ]
+            icon: <ContactMail />,
+        },
+    ],
 };
 
 export default NavigationConfig;

@@ -1,9 +1,9 @@
 import React from 'react';
-import Section from "./Section";
-import SectionConfig from "../configs/SectionConfig";
+import Section from './Section';
+import SectionConfig from '../configs/SectionConfig';
 
-const Sections = (): JSX.Element => {
-    const sections = SectionConfig.sections;
+function Sections(): JSX.Element {
+    const { sections } = SectionConfig;
 
     return (
         <div>
@@ -16,11 +16,12 @@ const Sections = (): JSX.Element => {
                     mainHeadingThree={section.mainHeadingThree}
                     mainParagraph={section.mainParagraph}
                     secondaryHeading={section.secondaryHeading}
-                    children={section.children}
-                />
+                >
+                    {section.children}
+                </Section>
             ))}
         </div>
     );
-};
+}
 
 export default Sections;

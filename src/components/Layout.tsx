@@ -1,16 +1,16 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import Navigation from './Navigation';
-import PageIndicator from "./PageIndicator";
-import Sections from "./Sections";
-import PageDecorations from "./PageDecorations";
+import PageIndicator from './PageIndicator';
+import Sections from './Sections';
+import PageDecorations from './PageDecorations';
 
-const Layout = (): JSX.Element => {
+function Layout(): JSX.Element {
     const [path, setPath] = useState(window.location.pathname);
 
     return (
         <div className="layout">
-            <div className="bg-image"/>
+            <div className="bg-image" />
 
             <Navigation path={path} setPath={setPath} />
             <PageIndicator path={path} />
@@ -19,9 +19,9 @@ const Layout = (): JSX.Element => {
 
             <Sections />
 
-            {/*<Footer />*/}
+            {/* <Footer /> */}
         </div>
     );
-};
+}
 
 export default Layout;

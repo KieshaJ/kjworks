@@ -1,26 +1,21 @@
 import React, { MouseEventHandler } from 'react';
 
 type Props = {
-    active?: boolean;
-    label: string;
-    onClick?: MouseEventHandler;
-    children: JSX.Element;
+    active: boolean | false;
+    label: string | null;
+    onClick: MouseEventHandler;
 };
 
-const Tab = (props: Props): JSX.Element => {
+function Tab(props: Props): JSX.Element {
     const { active, label, onClick } = props;
 
     return (
         <li className={active ? 'tab-active' : ''}>
-            <button
-                type="button"
-                className='tab'
-                onClick={onClick}
-            >
+            <button type="button" className="tab" onClick={onClick}>
                 {label}
             </button>
         </li>
     );
-};
+}
 
 export default Tab;

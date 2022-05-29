@@ -1,5 +1,5 @@
-import React, {MouseEventHandler} from 'react';
-import {Link} from 'react-router-dom';
+import React, { MouseEventHandler } from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {
     active: boolean;
@@ -8,8 +8,8 @@ type Props = {
     onClick: MouseEventHandler;
 };
 
-const MenuLink = (props: Props): JSX.Element => {
-    const {active, url, children, onClick} = props;
+function MenuLink(props: Props): JSX.Element {
+    const { active, url, children, onClick } = props;
 
     return (
         <Link
@@ -17,14 +17,12 @@ const MenuLink = (props: Props): JSX.Element => {
             className={`menu-link ${active ? 'active' : ''}`}
             onClick={onClick}
         >
-            <span className="bubble bubble-1"/>
-            <span className="bubble bubble-2"/>
-            <span className="bubble bubble-3"/>
-            <div className="link-content">
-                {children}
-            </div>
+            <span className="bubble bubble-1" />
+            <span className="bubble bubble-2" />
+            <span className="bubble bubble-3" />
+            <div className="link-content">{children}</div>
         </Link>
     );
-};
+}
 
 export default MenuLink;

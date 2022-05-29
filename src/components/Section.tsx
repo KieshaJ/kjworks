@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    Container
-} from "@material-ui/core";
+import { Container } from '@material-ui/core';
 
 type Props = {
     id: string;
@@ -14,8 +12,17 @@ type Props = {
     children: JSX.Element | null;
 };
 
-const Section = (props: Props): JSX.Element => {
-    const {id, large, mainHeadingOne, mainHeadingTwo, mainHeadingThree, mainParagraph, secondaryHeading, children} = props;
+function Section(props: Props): JSX.Element {
+    const {
+        id,
+        large,
+        mainHeadingOne,
+        mainHeadingTwo,
+        mainHeadingThree,
+        mainParagraph,
+        secondaryHeading,
+        children,
+    } = props;
 
     return (
         <Container maxWidth={large ? 'lg' : 'md'}>
@@ -26,19 +33,15 @@ const Section = (props: Props): JSX.Element => {
                         <span className="text-primary">{mainHeadingTwo}</span>
                         <span>{mainHeadingThree}</span>
                     </h1>
-                    <p>
-                        {mainParagraph}
-                    </p>
+                    <p>{mainParagraph}</p>
                 </div>
                 <div className="panel">
                     <h2>{secondaryHeading}</h2>
-                    <div>
-                        {children}
-                    </div>
+                    <div>{children}</div>
                 </div>
             </div>
         </Container>
     );
-};
+}
 
 export default Section;

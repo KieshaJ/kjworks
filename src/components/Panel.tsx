@@ -1,23 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
 type Props = {
-    panelHeading?: string;
-    classes?: string;
-    useDefaultClass?: boolean;
-    animated?: boolean;
+    panelHeading: string | null;
+    classes: string | null;
+    useDefaultClass: boolean | true;
+    animated: boolean | null;
     children: JSX.Element;
 };
 
-const Panel = (props: Props): JSX.Element => {
+function Panel(props: Props): JSX.Element {
     const [loaded, setLoaded] = useState(false);
 
-    const {
-        panelHeading,
-        classes,
-        useDefaultClass,
-        animated,
-        children,
-    } = props;
+    const { panelHeading, classes, useDefaultClass, animated, children } =
+        props;
 
     useEffect(() => {
         if (animated) {
@@ -29,9 +24,9 @@ const Panel = (props: Props): JSX.Element => {
 
     return (
         <div
-            className={`panel-padding ${useDefaultClass ? 'panel' : ''} ${classes} ${
-                loaded ? 'loaded' : ''
-            }`}
+            className={`panel-padding ${
+                useDefaultClass ? 'panel' : ''
+            } ${classes} ${loaded ? 'loaded' : ''}`}
         >
             <h1 className="panel-heading">{panelHeading}</h1>
             {children}
@@ -40,6 +35,6 @@ const Panel = (props: Props): JSX.Element => {
             <span className="panel-shape panel-shape-3" />
         </div>
     );
-};
+}
 
 export default Panel;

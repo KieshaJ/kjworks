@@ -6,7 +6,7 @@ type Props = {
     children: JSX.Element[];
 };
 
-const Tabs = (props: Props): JSX.Element => {
+function Tabs(props: Props): JSX.Element {
     const [active, setActive] = useState(0);
 
     const changeActive = (index: number): void => {
@@ -25,9 +25,7 @@ const Tabs = (props: Props): JSX.Element => {
                             active={active === index}
                             label={child.props.id}
                             onClick={(): void => changeActive(index)}
-                        >
-                            {child.props.children}
-                        </Tab>
+                        />
                     );
                 })}
             </ul>
@@ -42,6 +40,6 @@ const Tabs = (props: Props): JSX.Element => {
             </div>
         </div>
     );
-};
+}
 
 export default Tabs;

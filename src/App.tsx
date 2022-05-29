@@ -1,17 +1,17 @@
 import React from 'react';
-import "./scss/App.scss"
-import { BrowserRouter } from "react-router-dom";
+import './scss/App.scss';
+import { BrowserRouter } from 'react-router-dom';
 
-import Layout from "./components/Layout";
+import Layout from './components/Layout';
 
-const App = () => {
+function App() {
     return (
         <BrowserRouter>
             <div className="app">
-                <Layout/>
+                <Layout />
             </div>
         </BrowserRouter>
     );
-};
+}
 
 export default App;
