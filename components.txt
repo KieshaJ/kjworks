@@ -1,0 +1,19 @@
+KJWorks 
+	|
+	|- Logo (Top left)
+	|
+	|- Top page decoration Component(made of 3 svgs with different primary color shades)
+	|
+	|- Terminal component (Might need a scrollbar)
+	|	|
+	|	|- Auto-welcome Component (Some basic introduction, command list, pops up automatically upon load)
+	|	|
+	|	|- Terminal log Component (Stores the text in the terminal as the user progresses with commands and such)
+	|	|	|
+	|	|	|- Link Component (Clickable external link to a page, will be all over text blocks)
+	|	|
+	|	|- Input component (the >>> line, where the user inputs commands)
+	|
+	|- Bottom page decoration Component(made of 3 svgs with different secondary color shades)
+	|
+	|- Footer
