@@ -6,6 +6,8 @@ KJWorks
 	|
 	|- Terminal component (Might need a scrollbar)
 	|	|
+	|	|- Terminal decoration (Top bar for the terminal itself)
+	|	|
 	|	|- Auto-welcome Component (Some basic introduction, command list, pops up automatically upon load)
 	|	|
 	|	|- Terminal log Component (Stores the text in the terminal as the user progresses with commands and such)

@@ -11,6 +11,7 @@ $secondary-font: 'Varela Round', sans-serif;
 
 $gradient: linear-gradient(45deg, $secondary-color, $primary-color);
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @font-face {
     font-family: "WarowniaUlt";
@@ -18,13 +19,16 @@ $gradient: linear-gradient(45deg, $secondary-color, $primary-color);
 }
 
 @import 'Layout';
+@import 'Logo';
 @import 'PageDecorations';
-@import 'Navigation';
-@import 'PageIndicator';
-@import 'Section';
-@import 'AnimatedLink';
+@import 'Terminal';
+@import 'TextLink';
+// @import 'Navigation';
+// @import 'PageIndicator';
+// @import 'Section';
+// @import 'AnimatedLink';
 @import 'Footer';
-@import 'Tabs';
+// @import 'Tabs';
 
 * {
     margin: 0;
@@ -69,7 +73,7 @@ h5 {
 }
 
 a {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 

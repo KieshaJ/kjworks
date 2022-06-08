@@ -1,0 +1,9 @@
+.text-link {
+    a {
+        color: $primary-color !important;
+
+        &:hover {
+            color: $primary-color-darker !important;
+        }
+    }
+}

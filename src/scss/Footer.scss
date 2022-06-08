@@ -1,13 +1,15 @@
 .footer {
-    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+    width: 220px;
     height: 100px;
     display: inline-flex;
     align-items: center;
-    background: rgb(255, 255, 255);
-    color: black;
+    z-index: 5;
 
     h5 {
-        color: black ;
+        color: $white-color;
         position: relative;
         z-index: 1;
         margin: auto;

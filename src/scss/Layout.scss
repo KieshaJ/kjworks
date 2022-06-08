@@ -1,6 +1,9 @@
 .layout {
     width: 100vw;
-    scroll-snap-type: y proximity;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .bg-image {
         position: fixed;
@@ -11,8 +14,8 @@
         background-image: url("../images/logo1.png");
         background-position: center;
         transform: scale(2);
-        opacity: 0.3;
-        z-index: 1;
+        opacity: 0.1;
+        z-index: 0;
     }
 }
 

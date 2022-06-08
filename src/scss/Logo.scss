@@ -1,0 +1,14 @@
+.logo {
+    position: absolute;
+        top: 0;
+        left: 0;
+        height: 128px;
+        padding: 4px;
+        background-color: black;
+        box-sizing: border-box;
+        z-index: 5;
+
+        .logo-img {
+            max-width: 124px;
+        }
+}

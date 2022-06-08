@@ -2,29 +2,30 @@
     position: fixed;
     display: block;
     width: 100vw;
-    // min-height: 320px;
     right: 0;
-    // background: url("../images/svg/PageDecorationTop1.svg");
-    // background-size: 100vw 320px;
 
     &.first {
-        z-index: 4;
-        // top: -100px;
+        z-index: 3;
     }
 
     &.second {
         z-index: 2;
-        // top: -70px !important;
     }
 
     &.third {
-        z-index: 2;
-        // bottom: -70px;
+        z-index: 1;
     }
 
     &.fourth {
-        z-index: 4;
-        // bottom: -100px;
+        z-index: 1;
+    }
+
+    &.fifth {
+        z-index: 2;
+    }
+
+    &.sixth {
+        z-index: 3;
     }
 }
 
@@ -39,11 +40,19 @@
         }
 
         &.third {
-            bottom: 0;
+            top: 0;
         }
 
         &.fourth {
+            bottom: 0;
+        }
+
+        &.fifth {
             bottom: -10px;
+        }
+
+        &.sixth {
+            bottom: -20px;
         }
     }
 }
@@ -59,10 +68,18 @@
         }
 
         &.third {
-            bottom: -80px;
+            top: -60px;
         }
 
         &.fourth {
+            bottom: -70px;
+        }
+
+        &.fifth {
+            bottom: -80px;
+        }
+
+        &.sixth {
             bottom: -90px;
         }
     }

@@ -1,25 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import Navigation from './Navigation';
-import PageIndicator from './PageIndicator';
-import Sections from './Sections';
 import PageDecorations from './PageDecorations';
+import Footer from './Footer';
+import Logo from './Logo';
+import Terminal from './Terminal';
 
 function Layout(): JSX.Element {
-    const [path, setPath] = useState(window.location.pathname);
-
     return (
         <div className="layout">
             <div className="bg-image" />
 
-            <Navigation path={path} setPath={setPath} />
-            <PageIndicator path={path} />
-
+            <Logo />
             <PageDecorations />
-
-            <Sections />
-
-            {/* <Footer /> */}
+            <Terminal />
+            <Footer />
         </div>
     );
 }
